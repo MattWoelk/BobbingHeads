@@ -1,15 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjfivyj7cth8y"]
+[gd_scene load_steps=6 format=3 uid="uid://bjfivyj7cth8y"]
 
 [ext_resource type="AudioStream" uid="uid://da1c0i6cx1fvo" path="res://sounds/epanody-we_need_to_talk_about_this_right_now.wav" id="1_mx1yj"]
 [ext_resource type="Script" path="res://scenes/bobbing_head.gd" id="1_orjwq"]
-[ext_resource type="Texture2D" uid="uid://d17kl877nwjog" path="res://icon.svg" id="2_tf8es"]
+[ext_resource type="Texture2D" uid="uid://d17kl877nwjog" path="res://images/icon.svg" id="2_tf8es"]
+[ext_resource type="Shader" path="res://scenes/bobbing_head_desaturator.gdshader" id="4_yagsg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3dqbf"]
+shader = ExtResource("4_yagsg")
+shader_parameter/saturation = 1.0
 
 [node name="BobbingHead" type="Node2D"]
 script = ExtResource("1_orjwq")
 audio_file = ExtResource("1_mx1yj")
-bus = "Master"
+image = ExtResource("2_tf8es")
+bus = "Head1"
+bus_index = 1
+lerp_half_life = 0.08
+audio_mute_threshold = 0.05
+pow_amount = 0.25
+smooth_step_constant = 1.25
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_3dqbf")
 texture = ExtResource("2_tf8es")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fi2yl4onhnay"]
+[gd_scene load_steps=4 format=3 uid="uid://fi2yl4onhnay"]
 
-[ext_resource type="Texture2D" uid="uid://d17kl877nwjog" path="res://icon.svg" id="1_yiq4v"]
+[ext_resource type="Texture2D" uid="uid://d17kl877nwjog" path="res://images/icon.svg" id="1_yiq4v"]
 [ext_resource type="PackedScene" uid="uid://bjfivyj7cth8y" path="res://scenes/bobbing_head.tscn" id="2_op3p1"]
+[ext_resource type="Texture2D" uid="uid://dti114a1xoipy" path="res://images/head1.png" id="3_s47i5"]
 
 [node name="RecordingStage" type="Node2D"]
 
@@ -18,19 +19,17 @@ offset_bottom = 1080.0
 texture = ExtResource("1_yiq4v")
 
 [node name="Matt" parent="Control" instance=ExtResource("2_op3p1")]
-position = Vector2(390, 552)
-scale = Vector2(2.68, 3.68)
-bus = "Head1"
-bus_index = 1
+position = Vector2(390, 560)
+image = ExtResource("3_s47i5")
 
 [node name="Dan" parent="Control" instance=ExtResource("2_op3p1")]
 position = Vector2(967, 564)
-scale = Vector2(2.56, 4.04)
+image = ExtResource("3_s47i5")
 bus = "Head2"
 bus_index = 2
 
 [node name="Ben" parent="Control" instance=ExtResource("2_op3p1")]
 position = Vector2(1454, 551)
-scale = Vector2(2.45925, 3.30633)
+image = ExtResource("3_s47i5")
 bus = "Head3"
 bus_index = 3
