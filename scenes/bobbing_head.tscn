@@ -6,9 +6,10 @@
 
 [node name="BobbingHead" type="Node2D"]
 script = ExtResource("1_orjwq")
+audio_file = ExtResource("1_mx1yj")
+bus = "Master"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_mx1yj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tf8es")
