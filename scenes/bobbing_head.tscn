@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjfivyj7cth8y"]
+
+[ext_resource type="AudioStream" uid="uid://da1c0i6cx1fvo" path="res://sounds/epanody-we_need_to_talk_about_this_right_now.wav" id="1_mx1yj"]
+[ext_resource type="Script" path="res://scenes/bobbing_head.gd" id="1_orjwq"]
+[ext_resource type="Texture2D" uid="uid://d17kl877nwjog" path="res://icon.svg" id="2_tf8es"]
+
+[node name="BobbingHead" type="Node2D"]
+script = ExtResource("1_orjwq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_mx1yj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tf8es")
