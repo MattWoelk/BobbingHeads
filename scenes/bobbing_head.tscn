@@ -16,7 +16,7 @@ image = ExtResource("2_tf8es")
 bus = "Head1"
 bus_index = 1
 lerp_half_life = 0.08
-audio_mute_threshold = 0.05
+audio_mute_threshold = 0.03
 pow_amount = 0.25
 smooth_step_constant = 1.25
 
